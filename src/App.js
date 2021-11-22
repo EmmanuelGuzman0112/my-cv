@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Components/Header';
-import Presentation from './Components/Presentation';
 import Footer from './Components/Footer';
+import MyCV from './Components/MyCV';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Header className="App-header" />
 
       <main>
-        <Presentation/>
+        <MyCV/>
       </main>
 
       <Footer/>
