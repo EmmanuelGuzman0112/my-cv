@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
 
-      <Header className="App-header" />
+      {/*className="App-header" */}
+      <Header/>
 
       <main>
         <MyCV/>

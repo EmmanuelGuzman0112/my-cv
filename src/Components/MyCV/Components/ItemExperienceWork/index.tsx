@@ -3,23 +3,38 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { FunctionComponent } from 'react';
+import {Experience} from 'Models';
 
-const ItemExperienceWork = () => {
+type Props = {
+	experience: Experience,
+  item: number,
+};
+
+const ItemExperienceWork: FunctionComponent<Props> = (props, {item}) => {
+
+	const {
+    tituloPuesto,
+    empresa,
+    desde,
+    hasta,
+    descripcion,
+	} = props.experience;
+
   return (
     <>
-    {/* Acomodar esto */}
-      <Accordion>
+      <Accordion key= {item}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>{tituloPuesto}</Typography>
+          <Typography>{empresa} | {desde} - {hasta}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            {descripcion}
           </Typography>
         </AccordionDetails>
       </Accordion>
