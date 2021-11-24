@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { FunctionComponent } from 'react';
 import {TExperience} from 'Models';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 type Props = {
 	experience: TExperience,
@@ -19,6 +21,7 @@ const ItemExperienceWork: FunctionComponent<Props> = (props, {item}) => {
     desde,
     hasta,
     descripcion,
+    tecnologias,
 	} = props.experience;
 
   return (
@@ -36,6 +39,11 @@ const ItemExperienceWork: FunctionComponent<Props> = (props, {item}) => {
           <Typography>
             {descripcion}
           </Typography>
+          <Stack direction="row" spacing={1}>
+            {tecnologias.map((tecnologia) => (
+              <Chip label={tecnologia} />
+            ))}
+          </Stack>
         </AccordionDetails>
       </Accordion>
     </>

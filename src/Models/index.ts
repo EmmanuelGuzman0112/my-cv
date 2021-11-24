@@ -4,6 +4,7 @@ export type TExperience = {
 	desde: string;
 	hasta: string;
 	descripcion: string;
+	tecnologias: string[];
 };
 
 export type TEducation = {
