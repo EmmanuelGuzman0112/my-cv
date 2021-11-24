@@ -1,9 +1,10 @@
 import ItemExperienceWork from '../ItemExperienceWork';
-import {Experience} from 'Models';
+import {TExperience} from 'Models';
+import Typography from '@mui/material/Typography';
 
 const ExperienceWork = () => {
 
-    const arrayExperience: Experience[] = [
+    const arrayExperience: TExperience[] = [
         {
             tituloPuesto: 'DESARROLLADOR DE BASE DE DATOS SQL SERVER',
             empresa: 'HASAR SISTEMAS',
@@ -43,7 +44,8 @@ const ExperienceWork = () => {
 
 return (
     <>
-        {arrayExperience.map((experience: Experience, i) => (
+        <Typography>My work experience </Typography>
+        {arrayExperience.map((experience: TExperience, i) => (
             <ItemExperienceWork 
                 experience = {experience}
                 item = {i}
